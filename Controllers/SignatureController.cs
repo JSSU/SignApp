@@ -15,10 +15,12 @@ namespace SignApp.Controllers
             var photo = Convert.FromBase64String(data.Value);
 
             var dir = new DirectoryInfo(HostingEnvironment.ApplicationPhysicalPath);
-
-            using (var fs = System.IO.File.Create(Path.Combine(dir.FullName, string.Format("Img_{0}.png", Guid.NewGuid()))))
+            string fpath=Path.Combine(dir.FullName + "/PicDB", string.Format("Img_{0}.png", Guid.NewGuid()));
+            using (var fs = System.IO.File.Create(fpath))
             {
+                
                 fs.Write(photo, 0, photo.Length);
+
             }
 
             return Ok();

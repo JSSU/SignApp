@@ -32,7 +32,6 @@ C:\Users\rperales\Documents\Visual Studio 2010\Projects\SignApp\bin\SignApp.pdb
 C:\Users\rperales\Documents\Visual Studio 2010\Projects\SignApp\obj\Debug\SignApp.dll
 C:\Users\rperales\Documents\Visual Studio 2010\Projects\SignApp\obj\Debug\SignApp.pdb
 C:\Users\rperales\Documents\Visual Studio 2010\Projects\SignApp\obj\Debug\SignApp.csprojResolveAssemblyReference.cache
-R:\Projects\VS 2015\OSAT\SignApp\obj\Debug\SignApp.csprojResolveAssemblyReference.cache
 R:\Projects\VS 2015\OSAT\SignApp\obj\Debug\SignApp.dll
 R:\Projects\VS 2015\OSAT\SignApp\obj\Debug\SignApp.pdb
 R:\Projects\VS 2015\OSAT\SignApp\bin\SignApp.dll.config

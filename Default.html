@@ -7,8 +7,8 @@
 <body>
 
     <script src="jQuery/jquery-2.0.3.min.js"></script>
-         <link rel="stylesheet" href="//localhost:49186/css/bootstrap.min.css">
-    <link rel="stylesheet" href="localhost:49186/css/bootstrap-theme.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <script src="js/bootstrap.min.js"></script>
     <script src="scripts/signature_pad.js"></script>
 
@@ -78,26 +78,32 @@
             alert(errormsg.Message);
         }
     </script>
+    <form class="form-inline">
+        <div class="page-header">
+            <h1>
+                <center>MOTOR VEHICLE ACCIDENT REPORT DIAGRAM</center>
+            </h1>
+        </div>
+        <div class="container detail" style="float:left; width:20%;">
+            <span id="lbID" for="inpID" style="margin-right:20px;">ID</span>
+            <input type="text" id="inpID" class="form-control" style="display:inline;" />
+        </div>
+        <div class="container" style="float:right; width:80%;">
 
-    <div class="page-header">
-        <h1>
-        <center>MOTOR VEHICLE ACCIDENT REPORT DIAGRAM</center>
-      </h1>
-    </div>
 
-    <div class="panel panel-default">
-        <div class="panel-body" id="signature-pad">
-            <div>
-                <canvas style="width: 100%; height: 600px;">
-                                
-             </canvas>
-            </div>
-            <div>
-                <div class="alert alert-info">Sign above</div>
-                <button data-action="clear" class="btn btn-info">Clear</button>
-                <button data-action="save" class="btn btn-success">Save</button>
+            <div class="panel panel-default">
+                <div class="panel-body" id="signature-pad">
+                    <div>
+                        <canvas style="width: 100%; height: 600px;"></canvas>
+                    </div>
+                    <div>
+                        <div class="alert alert-info">Draw above</div>
+                        <button data-action="clear" class="btn btn-info">Clear</button>
+                        <button data-action="save" class="btn btn-success">Save</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </form>  
 </body>
 </html>
