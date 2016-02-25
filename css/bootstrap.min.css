@@ -40,6 +40,7 @@ video {
 	 background-size: 1200px  100%;
 		background-repeat: no-repeat;
 		 background-position: center; 
+    cursor: crosshair;/*Fred2016.2.25 modify absolute url*/
 		 
 }
 audio:not([controls]) {
