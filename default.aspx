@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="SignApp.d" %>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Signature App</title>
@@ -78,7 +80,7 @@
             alert(errormsg.Message);
         }
     </script>
-    <form class="form-inline">
+
         <div class="page-header">
             <h1>
                 <center>MOTOR VEHICLE ACCIDENT REPORT DIAGRAM</center>
@@ -104,6 +106,6 @@
                 </div>
             </div>
         </div>
-    </form>  
+
 </body>
 </html>
