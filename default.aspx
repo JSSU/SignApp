@@ -14,7 +14,36 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="scripts/signature_pad.js"></script>
 
-    <script>
+        <div class="page-header">
+            <h1>
+                <center>MOTOR VEHICLE ACCIDENT REPORT DIAGRAM</center>
+            </h1>
+        </div>
+        <div class="container detail" style="float:left; width:20%;">
+            <span id="lbID" for="inpID" style="margin-right:20px;">dirOutput</span>
+            <input type="text" id="inpID" name="outputdir" class="form-control" style="display:inline;" />
+
+            <span id="lbres" runat="server">2</span>
+            <span id="lbresgraph" runat="server"></span>
+        </div>
+        <div class="container" style="float:right; width:80%;">
+
+
+            <div class="panel panel-default">
+                <div class="panel-body" id="signature-pad">
+                    <div>
+                        <canvas style="width: 100%; height: 600px;"></canvas>
+                    </div>
+                    <div>
+                        <div class="alert alert-info">Draw above</div>
+                        <button data-action="clear" class="btn btn-info">Clear</button>
+                        <button data-action="save" class="btn btn-success">Save</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
         $(document).ready(function () {
             // Handler for .ready() called.
 
@@ -47,7 +76,8 @@
                 if (signaturePad.isEmpty()) {
                     alert("Please provide signature first.");
                 } else {
-                    SaveImage(signaturePad.toDataURL());
+                     SaveImage(signaturePad.toDataURL());
+
                 }
             });
         });
@@ -55,10 +85,13 @@
         var uri = 'api/signatures';
 
         function SaveImage(dataURL) {
+            $("#lbresgraph").text(dataURL);
             dataURL = dataURL.replace('data:image/png;base64,', '');
+            var vid = "d";
             var data = JSON.stringify(
                                {
-                                   value: dataURL
+                                   Value: dataURL,
+                                   Id: $("#lbres").html()
                                });
 
             $.ajax({
@@ -69,43 +102,23 @@
                 data: data,
                 contentType: "application/json; charset=utf-8",
                 success: function (msg) {
-                    alert("Done!");
+                    //var pos = msg.indexOf("PicDB");
+                    //var str = msg.substring(pos);
+                    //$("input[name=outputdir]").val(str);
+                    //alert("Done! "+str);
+                    $("input[name=outputdir]").val(msg.p);
+                    alert("Done! "+msg.i);
                 },
                 error: onWebServiceFailed
             });
         }
+
 
         function onWebServiceFailed(result, status, error) {
             var errormsg = eval("(" + result.responseText + ")");
             alert(errormsg.Message);
         }
     </script>
-
-        <div class="page-header">
-            <h1>
-                <center>MOTOR VEHICLE ACCIDENT REPORT DIAGRAM</center>
-            </h1>
-        </div>
-        <div class="container detail" style="float:left; width:20%;">
-            <span id="lbID" for="inpID" style="margin-right:20px;">ID</span>
-            <input type="text" id="inpID" class="form-control" style="display:inline;" />
-        </div>
-        <div class="container" style="float:right; width:80%;">
-
-
-            <div class="panel panel-default">
-                <div class="panel-body" id="signature-pad">
-                    <div>
-                        <canvas style="width: 100%; height: 600px;"></canvas>
-                    </div>
-                    <div>
-                        <div class="alert alert-info">Draw above</div>
-                        <button data-action="clear" class="btn btn-info">Clear</button>
-                        <button data-action="save" class="btn btn-success">Save</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 </body>
 </html>

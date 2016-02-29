@@ -11,5 +11,23 @@ namespace SignApp {
     
     
     public partial class d {
+        
+        /// <summary>
+        /// lbres control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbres;
+        
+        /// <summary>
+        /// lbresgraph control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbresgraph;
     }
 }

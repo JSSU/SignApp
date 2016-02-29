@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -13,5 +14,12 @@ namespace SignApp
         {
 
         }
+
+        //[WebMethod]
+        //public int change_lb()
+        //{
+        //    lbres.InnerHtml = "hao";
+        //    return 0;
+        //}
     }
 }

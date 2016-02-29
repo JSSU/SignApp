@@ -38,3 +38,7 @@ R:\Projects\VS 2015\OSAT\SignApp\bin\SignApp.dll.config
 R:\Projects\VS 2015\OSAT\SignApp\bin\SignApp.dll
 R:\Projects\VS 2015\OSAT\SignApp\bin\SignApp.pdb
 R:\Projects\VS 2015\OSAT\SignApp\obj\Debug\SignApp.csprojResolveAssemblyReference.cache
+R:\Projects\VS 2015\OSAT\SignApp\bin\EntityFramework.dll
+R:\Projects\VS 2015\OSAT\SignApp\bin\EntityFramework.SqlServer.dll
+R:\Projects\VS 2015\OSAT\SignApp\bin\EntityFramework.xml
+R:\Projects\VS 2015\OSAT\SignApp\bin\EntityFramework.SqlServer.xml

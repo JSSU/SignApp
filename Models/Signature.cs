@@ -7,5 +7,6 @@ namespace SignApp.Models
     public class Signature
     {
         public string Value { get; set; }
+        public int Id { get; set; }
     }
 }
