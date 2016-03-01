@@ -89,7 +89,7 @@
 
                 }
             });
-
+            //set pen color
             redpen.addEventListener("click", function (event) {
                 signaturePad.penColor = "red";
             });
