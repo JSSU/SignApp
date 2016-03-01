@@ -37,7 +37,7 @@
                     <div>
                         <div class="alert alert-info">Draw above</div>
                         <button data-action="clear" class="btn btn-info">Clear</button>
-                        <button data-action="save" class="btn btn-success">Save</button>
+                        <button data-action="save" class="btn btn-success" runat="server">Save</button>
 
                     </div>
                 </div>

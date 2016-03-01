@@ -14,7 +14,8 @@ namespace SignApp.Models
     
     public partial class saveimg
     {
-        public int ID { get; set; }
+        public int PK { get; set; }
+        public int CaseID { get; set; }
         public string imgpath { get; set; }
     }
 }

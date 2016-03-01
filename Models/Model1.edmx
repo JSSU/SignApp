@@ -4,39 +4,33 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DPW_OBC_PrequalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DPW_OBC_Prequal.dbo.saveimg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+    <Schema Namespace="DPW_OBC_PrequalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="saveimg">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="PK" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CaseID" Type="int" Nullable="false" />
           <Property Name="imgpath" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <EntityContainer Name="DPW_OBC_PrequalModelStoreContainer">
-          <EntitySet Name="saveimg" EntityType="Self.saveimg" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [saveimg].[ID] AS [ID], 
-    [saveimg].[imgpath] AS [imgpath]
-    FROM [dbo].[saveimg] AS [saveimg]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="saveimg" EntityType="Self.saveimg" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DPW_OBC_PrequalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DPW_OBC_PrequalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="saveimgs" EntityType="DPW_OBC_PrequalModel.saveimg" />
+        </EntityContainer>
         <EntityType Name="saveimg">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="PK" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseID" Type="Int32" Nullable="false" />
           <Property Name="imgpath" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="DPW_OBC_PrequalEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="saveimgs" EntityType="Self.saveimg" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -46,8 +40,9 @@ warning 6002: The table/view 'DPW_OBC_Prequal.dbo.saveimg' does not have a prima
           <EntitySetMapping Name="saveimgs">
             <EntityTypeMapping TypeName="DPW_OBC_PrequalModel.saveimg">
               <MappingFragment StoreEntitySet="saveimg">
-                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="imgpath" ColumnName="imgpath" />
+                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
