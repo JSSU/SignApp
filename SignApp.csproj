@@ -97,6 +97,7 @@
     <Content Include="Global.asax" />
     <Content Include="jQuery\jquery-2.0.3.min.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\canvas2svg.js" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -106,6 +107,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\svgimg.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>svgimg.edmx</DependentUpon>
+      <LastGenOutput>svgimg.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\svgimg.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>svgimg.edmx</DependentUpon>
+      <LastGenOutput>svgimg.cs</LastGenOutput>
     </Content>
     <Content Include="obj\Debug\SignApp.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\SignApp.dll" />
@@ -166,7 +177,25 @@
     <Compile Include="Models\saveimg.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\saveimgsvg.cs">
+      <DependentUpon>svgimg.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Signature.cs" />
+    <Compile Include="Models\svgimg.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>svgimg.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\svgimg.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>svgimg.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\svgimg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>svgimg.edmx</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -189,6 +218,13 @@
     </EntityDeploy>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\svgimg.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>svgimg.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\svgimg.edmx.diagram">
+      <DependentUpon>svgimg.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

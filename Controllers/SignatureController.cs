@@ -40,12 +40,20 @@ namespace SignApp.Controllers
             try
             {
                 saveimg u = new saveimg();
-                u.CaseID = id;
-                u.imgpath= dbpath;
-                //{ ID = 3, imgpath = "df" };
-                dbcontact.saveimgs.Add(u);
-                //dbcontact.saveimgs.AddObject(u);
-                //dbcontact.saveimgs.InsertOnSubmit(update);
+                var flag = (from it in dbcontact.saveimgs
+                           where it.PK==id
+                           select it).SingleOrDefault();
+                if (flag == null)
+                {
+                    u.CaseID = id;
+                    u.imgpath = dbpath;
+                    dbcontact.saveimgs.Add(u); 
+                    //dbcontact.saveimgs.AddObject(u); //dbcontact.saveimgs.InsertOnSubmit(update);
+                }
+                else {
+                    flag.imgpath = dbpath;
+                    dbcontact.SaveChanges();
+                }
                 dbcontact.SaveChanges();
             }
             catch (Exception)

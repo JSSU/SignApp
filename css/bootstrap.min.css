@@ -36,7 +36,7 @@ video {
     display: inline-block;
 	background-color: #fff;
 	    vertical-align: baseline;
-	 background-image: url(../../diagram/vehicles-involved-diagram.png);/*Fred2016.2.25 modify absolute url*/
+	 /*background-image: url(../../diagram/vehicles-involved-diagram.png);/*Fred2016.2.25 modify absolute url*/*/
 	 background-size: 1200px  100%;
 		background-repeat: no-repeat;
 		 background-position: center; 
