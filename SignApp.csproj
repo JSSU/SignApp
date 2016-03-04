@@ -98,6 +98,7 @@
     <Content Include="jQuery\jquery-2.0.3.min.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\canvas2svg.js" />
+    <Content Include="loadimage.aspx" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -143,6 +144,7 @@
     <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" />
     <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll" />
     <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" />
+    <Content Include="PicDB\Img_109db7f3-ddf4-4272-af48-0867fb2bb660.png" />
     <Content Include="Scripts\signature_pad.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -158,6 +160,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="loadimage.aspx.cs">
+      <DependentUpon>loadimage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loadimage.aspx.designer.cs">
+      <DependentUpon>loadimage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -237,7 +246,6 @@
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="PicDB\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
